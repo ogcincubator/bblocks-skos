@@ -24,6 +24,7 @@ $defs:
   languageStringMultiple:
     oneOf:
       - $ref: '#/$defs/languageStringArrayObject'
+      - $ref: '#/$defs/languageStringSingle'
       - type: array
         items:
           type: string

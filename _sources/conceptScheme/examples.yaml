@@ -1,0 +1,16 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml?
+
+examples:
+  - title: ConceptScheme
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "Cast",
+            "prefLabel": "Usual Suspects",
+            "concepts": [ {
+              "id": "frog1",
+              "prefLabel": "Kermit"
+              }
+            ]
+          }
