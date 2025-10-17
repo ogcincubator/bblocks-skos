@@ -1,5 +1,5 @@
 Validation report for ogc.skos.common - Common SKOS properties
-Generated 2025-02-19T20:52:29.566542+00:00
+Generated 2025-10-17T10:13:23.267435+00:00
 === Files ===
 Using single-prefLabel.json from test resources
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for _sources/common/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/common/rules.shacl:
- - Shape :singlePrefLabel: _:N7d9450a668eb41dc89bafef7a27a5388
+ - Shape :singlePrefLabel: _:Nfc4e3e52f8d44e5e8928f6c397c45817
 
 === End SHACL ===
 

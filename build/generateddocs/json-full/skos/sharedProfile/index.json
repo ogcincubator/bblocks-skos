@@ -11,7 +11,7 @@
   "itemClass": "model",
   "register": "ogc",
   "version": "0.1",
-  "dateOfLastChange": "2025-02-19",
+  "dateOfLastChange": "2025-10-17",
   "sources": [
     {
       "title": "SKOS Reference",
@@ -20,19 +20,19 @@
   ],
   "dependsOn": [
     "ogc.skos.collection",
-    "ogc.skos.conceptScheme",
-    "ogc.skos.concept"
+    "ogc.skos.concept",
+    "ogc.skos.conceptScheme"
   ],
   "tags": [
     "skos",
     "profile"
   ],
-  "shaclRules": {
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
+  "shaclShapes": {
     "ogc.skos.concept": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/sharedProfile/",

@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc",
   "version": "0.1",
-  "dateOfLastChange": "2025-02-19",
+  "dateOfLastChange": "2025-10-17",
   "sources": [
     {
       "title": "SKOS Reference",
@@ -21,18 +21,18 @@
     "skos",
     "collection"
   ],
-  "shaclRules": {
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
+  "shaclShapes": {
     "ogc.skos.concept": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
   "dependsOn": [
-    "ogc.skos.common",
     "ogc.skos.concept",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.skos.common"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/context.jsonld",
   "schema": {

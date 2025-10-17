@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.skos.concept - SKOS Concept",
   "bblockName": "SKOS Concept",
   "bblockId": "ogc.skos.concept",
-  "generated": "2025-02-19T20:52:29.626265+00:00",
+  "generated": "2025-10-17T10:13:23.570056+00:00",
   "result": true,
   "items": [
     {
@@ -43,7 +43,7 @@
             {
               "op": "shacl-report",
               "shaclFile": "_sources/concept/rules.shacl",
-              "graph": "@prefix : <http://blocks.ogc.org/skos#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:n2759b65a156b4090a4f6bf1ebc6d041db1 ;\n            sh:resultMessage \"skos:related is disjoint with skos:broaderTransitive\" ;\n            sh:resultPath skos:related ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"skos:related is disjoint with skos:broaderTransitive\" ;\n                    sh:select \"\"\"\n        prefix skos: <http://www.w3.org/2004/02/skos/core#>\n        SELECT $this (skos:related as ?path) ?target WHERE {\n          $this skos:related ?target .\n          { $this skos:broader ?target }\n          UNION\n          { $this skos:narrower ?target }\n          UNION\n          { $this skos:broaderTransitive ?target }\n          UNION\n          { $this skos:narrowerTransitive ?target }\n        }\n      \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape :relatedDisjointWithBroaderTransitive ;\n            sh:value _:n2759b65a156b4090a4f6bf1ebc6d041db1 ] .\n\n_:n2759b65a156b4090a4f6bf1ebc6d041db1 skos:broader [ ] ;\n    skos:related [ ] .\n\n",
+              "graph": "@prefix : <http://blocks.ogc.org/skos#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:nea35aa1e8b624455b7c2bc96e35fb33fb1 ;\n            sh:resultMessage \"skos:related is disjoint with skos:broaderTransitive\" ;\n            sh:resultPath skos:related ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"skos:related is disjoint with skos:broaderTransitive\" ;\n                    sh:select \"\"\"\n        prefix skos: <http://www.w3.org/2004/02/skos/core#>\n        SELECT $this (skos:related as ?path) ?target WHERE {\n          $this skos:related ?target .\n          { $this skos:broader ?target }\n          UNION\n          { $this skos:narrower ?target }\n          UNION\n          { $this skos:broaderTransitive ?target }\n          UNION\n          { $this skos:narrowerTransitive ?target }\n        }\n      \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape :relatedDisjointWithBroaderTransitive ;\n            sh:value _:nea35aa1e8b624455b7c2bc96e35fb33fb1 ] .\n\n_:nea35aa1e8b624455b7c2bc96e35fb33fb1 skos:broader [ ] ;\n    skos:related [ ] .\n\n",
               "isError": true,
               "message": "Validation result for _sources/concept/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: :relatedDisjointWithBroaderTransitive\n  \tFocus Node: [ skos:broader [ ] ; skos:related [ ] ]\n  \tValue Node: [ skos:broader [ ] ; skos:related [ ] ]\n  \tResult Path: skos:related\n  \tSource Constraint: [ sh:message Literal(\"skos:related is disjoint with skos:broaderTransitive\") ; sh:select Literal(\"\n          prefix skos: <http://www.w3.org/2004/02/skos/core#>\n          SELECT $this (skos:related as ?path) ?target WHERE {\n            $this skos:related ?target .\n            { $this skos:broader ?target }\n            UNION\n            { $this skos:narrower ?target }\n            UNION\n            { $this skos:broaderTransitive ?target }\n            UNION\n            { $this skos:narrowerTransitive ?target }\n          }\n        \") ]\n  \tMessage: skos:related is disjoint with skos:broaderTransitive\n  "
             },
@@ -52,29 +52,90 @@
               "focusNodes": {
                 ":relatedDisjointWithBroaderTransitive": {
                   "nodes": [
-                    "_:n2759b65a156b4090a4f6bf1ebc6d041db1"
+                    "_:nea35aa1e8b624455b7c2bc96e35fb33fb1"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: _:n2759b65a156b4090a4f6bf1ebc6d041db1\n"
+              "message": "Focus nodes for _sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: _:nea35aa1e8b624455b7c2bc96e35fb33fb1\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/skos/concept/example_1_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/concept/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
             },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/common/rules.shacl",
+              "shaclFile": "_sources/concept/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/concept/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/common/rules.shacl",
+              "shaclFile": "_sources/concept/rules.shacl",
               "focusNodes": {
-                ":singlePrefLabel": {
+                ":relatedDisjointWithBroaderTransitive": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: *none*\n"
+              "message": "Focus nodes for _sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: *none*\n"
             }
           ]
         }
@@ -83,8 +144,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 1,
-    "passed": 1,
+    "total": 2,
+    "passed": 2,
     "failed": 0
   }
 }

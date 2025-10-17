@@ -1,0 +1,11 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld",
+  "id": "Cast",
+  "prefLabel": "Usual Suspects",
+  "concepts": [
+    {
+      "id": "frog1",
+      "prefLabel": "Kermit"
+    }
+  ]
+}

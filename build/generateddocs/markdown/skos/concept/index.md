@@ -7,6 +7,41 @@ A Concept as defined in SKOS
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Concept
+#### json
+```json
+{
+   "id": "frog1",
+   "prefLabel": "Kermit",
+   "broader": "stars",
+   "definition": "the green guy"
+ }
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld",
+  "id": "frog1",
+  "prefLabel": "Kermit",
+  "broader": "stars",
+  "definition": "the green guy"
+}
+```
+
+#### ttl
+```ttl
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<file:///github/workspace/frog1> skos:definition "the green guy" ;
+    skos:prefLabel "Kermit" .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -93,6 +128,52 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "ConceptScheme": "skos:ConceptScheme",
+    "Concept": "skos:Concept",
+    "Collection": "skos:Collection",
+    "OrderedCollection": "skos:OrderedCollection",
+    "id": "@id",
+    "skosType": "@type",
+    "prefLabel": {
+      "@id": "skos:prefLabel",
+      "@container": "@language"
+    },
+    "altLabel": {
+      "@id": "skos:altLabel",
+      "@container": "@language"
+    },
+    "notation": {
+      "@id": "skos:notation",
+      "@container": "@language"
+    },
+    "note": {
+      "@id": "skos:note",
+      "@container": "@language"
+    },
+    "changeNote": {
+      "@id": "skos:changeNote",
+      "@container": "@language"
+    },
+    "definition": {
+      "@id": "skos:definition",
+      "@container": "@language"
+    },
+    "editorialNote": {
+      "@id": "skos:editorialNote",
+      "@container": "@language"
+    },
+    "example": {
+      "@id": "skos:example",
+      "@container": "@language"
+    },
+    "historyNote": {
+      "@id": "skos:historyNote",
+      "@container": "@language"
+    },
+    "scopeNote": {
+      "@id": "skos:scopeNote",
+      "@container": "@language"
+    },
     "topConceptOf": {
       "@context": {
         "concepts": {
@@ -154,55 +235,15 @@ Links to the schema:
       "@type": "@id"
     },
     "collections": {
+      "@context": {
+        "members": {
+          "@id": "skos:members",
+          "@type": "@id"
+        }
+      },
       "@id": "skos:collections",
       "@type": "@id"
     },
-    "id": "@id",
-    "skosType": "@type",
-    "prefLabel": {
-      "@id": "skos:prefLabel",
-      "@container": "@language"
-    },
-    "altLabel": {
-      "@id": "skos:altLabel",
-      "@container": "@language"
-    },
-    "notation": {
-      "@id": "skos:notation",
-      "@container": "@language"
-    },
-    "note": {
-      "@id": "skos:note",
-      "@container": "@language"
-    },
-    "changeNote": {
-      "@id": "skos:changeNote",
-      "@container": "@language"
-    },
-    "definition": {
-      "@id": "skos:definition",
-      "@container": "@language"
-    },
-    "editorialNote": {
-      "@id": "skos:editorialNote",
-      "@container": "@language"
-    },
-    "example": {
-      "@id": "skos:example",
-      "@container": "@language"
-    },
-    "historyNote": {
-      "@id": "skos:historyNote",
-      "@container": "@language"
-    },
-    "scopeNote": {
-      "@id": "skos:scopeNote",
-      "@container": "@language"
-    },
-    "ConceptScheme": "skos:ConceptScheme",
-    "Concept": "skos:Concept",
-    "Collection": "skos:Collection",
-    "OrderedCollection": "skos:OrderedCollection",
     "memberList": {
       "@id": "skos:memberList",
       "@type": "@id",

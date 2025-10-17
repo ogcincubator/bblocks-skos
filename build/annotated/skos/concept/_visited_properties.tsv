@@ -1,15 +1,26 @@
 path	@id
+/id	@id
+/skosType	@type
+/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
+/altLabel	http://www.w3.org/2004/02/skos/core#altLabel
+/hiddenLabel	
+/notation	http://www.w3.org/2004/02/skos/core#notation
+/notation/@value	
+/notation/@type	
+/note	http://www.w3.org/2004/02/skos/core#note
+/changeNote	http://www.w3.org/2004/02/skos/core#changeNote
+/definition	http://www.w3.org/2004/02/skos/core#definition
+/editorialNote	http://www.w3.org/2004/02/skos/core#editorialNote
+/example	http://www.w3.org/2004/02/skos/core#example
+/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
+/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote
 /topConceptOf	skos:topConceptOf
 /topConceptOf/id	@id
-/topConceptOf/concepts	skos:inScheme
-/topConceptOf/topConcepts	skos:hasTopConcept
 /topConceptOf/skosType	@type
 /topConceptOf/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
 /topConceptOf/altLabel	http://www.w3.org/2004/02/skos/core#altLabel
 /topConceptOf/hiddenLabel	
 /topConceptOf/notation	http://www.w3.org/2004/02/skos/core#notation
-/topConceptOf/notation/@value	
-/topConceptOf/notation/@type	
 /topConceptOf/note	http://www.w3.org/2004/02/skos/core#note
 /topConceptOf/changeNote	http://www.w3.org/2004/02/skos/core#changeNote
 /topConceptOf/definition	http://www.w3.org/2004/02/skos/core#definition
@@ -17,19 +28,48 @@ path	@id
 /topConceptOf/example	http://www.w3.org/2004/02/skos/core#example
 /topConceptOf/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
 /topConceptOf/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote
+/topConceptOf/concepts	skos:inScheme
+/topConceptOf/concepts/id	@id
+/topConceptOf/concepts/skosType	@type
+/topConceptOf/concepts/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
+/topConceptOf/concepts/altLabel	http://www.w3.org/2004/02/skos/core#altLabel
+/topConceptOf/concepts/hiddenLabel	
+/topConceptOf/concepts/notation	http://www.w3.org/2004/02/skos/core#notation
+/topConceptOf/concepts/note	http://www.w3.org/2004/02/skos/core#note
+/topConceptOf/concepts/changeNote	http://www.w3.org/2004/02/skos/core#changeNote
+/topConceptOf/concepts/definition	http://www.w3.org/2004/02/skos/core#definition
+/topConceptOf/concepts/editorialNote	http://www.w3.org/2004/02/skos/core#editorialNote
+/topConceptOf/concepts/example	http://www.w3.org/2004/02/skos/core#example
+/topConceptOf/concepts/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
+/topConceptOf/concepts/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote
+/topConceptOf/concepts/topConceptOf	skos:topConceptOf
+/topConceptOf/concepts/inScheme	skos:inScheme
+/topConceptOf/concepts/broaderConcepts	skos:broaderConcepts
+/topConceptOf/concepts/narrowerConcepts	skos:narrowerConcepts
+/topConceptOf/concepts/relatedConcepts	skos:relatedConcepts
+/topConceptOf/concepts/closeMatches	skos:closeMatches
+/topConceptOf/concepts/exactMatches	skos:exactMatches
+/topConceptOf/concepts/broadMatches	skos:broadMatches
+/topConceptOf/concepts/narrowMatches	skos:narrowMatches
+/topConceptOf/concepts/relatedMatches	skos:relatedMatches
+/topConceptOf/concepts/collections	skos:collections
+/topConceptOf/concepts/collections/id	@id
+/topConceptOf/concepts/collections/skosType	@type
+/topConceptOf/concepts/collections/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
+/topConceptOf/concepts/collections/altLabel	http://www.w3.org/2004/02/skos/core#altLabel
+/topConceptOf/concepts/collections/hiddenLabel	
+/topConceptOf/concepts/collections/notation	http://www.w3.org/2004/02/skos/core#notation
+/topConceptOf/concepts/collections/note	http://www.w3.org/2004/02/skos/core#note
+/topConceptOf/concepts/collections/changeNote	http://www.w3.org/2004/02/skos/core#changeNote
+/topConceptOf/concepts/collections/definition	http://www.w3.org/2004/02/skos/core#definition
+/topConceptOf/concepts/collections/editorialNote	http://www.w3.org/2004/02/skos/core#editorialNote
+/topConceptOf/concepts/collections/example	http://www.w3.org/2004/02/skos/core#example
+/topConceptOf/concepts/collections/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
+/topConceptOf/concepts/collections/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote
+/topConceptOf/concepts/collections/members	skos:members
+/topConceptOf/topConcepts	skos:hasTopConcept
 /inScheme	skos:inScheme
 /broaderConcepts	skos:broaderConcepts
-/broaderConcepts/topConceptOf	skos:topConceptOf
-/broaderConcepts/inScheme	skos:inScheme
-/broaderConcepts/broaderConcepts	skos:broaderConcepts
-/broaderConcepts/narrowerConcepts	skos:narrowerConcepts
-/broaderConcepts/relatedConcepts	skos:relatedConcepts
-/broaderConcepts/closeMatches	skos:closeMatches
-/broaderConcepts/exactMatches	skos:exactMatches
-/broaderConcepts/broadMatches	skos:broadMatches
-/broaderConcepts/narrowMatches	skos:narrowMatches
-/broaderConcepts/relatedMatches	skos:relatedMatches
-/broaderConcepts/collections	skos:collections
 /broaderConcepts/id	@id
 /broaderConcepts/skosType	@type
 /broaderConcepts/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
@@ -43,6 +83,17 @@ path	@id
 /broaderConcepts/example	http://www.w3.org/2004/02/skos/core#example
 /broaderConcepts/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
 /broaderConcepts/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote
+/broaderConcepts/topConceptOf	skos:topConceptOf
+/broaderConcepts/inScheme	skos:inScheme
+/broaderConcepts/broaderConcepts	skos:broaderConcepts
+/broaderConcepts/narrowerConcepts	skos:narrowerConcepts
+/broaderConcepts/relatedConcepts	skos:relatedConcepts
+/broaderConcepts/closeMatches	skos:closeMatches
+/broaderConcepts/exactMatches	skos:exactMatches
+/broaderConcepts/broadMatches	skos:broadMatches
+/broaderConcepts/narrowMatches	skos:narrowMatches
+/broaderConcepts/relatedMatches	skos:relatedMatches
+/broaderConcepts/collections	skos:collections
 /narrowerConcepts	skos:narrowerConcepts
 /relatedConcepts	skos:relatedConcepts
 /closeMatches	skos:closeMatches
@@ -51,16 +102,3 @@ path	@id
 /narrowMatches	skos:narrowMatches
 /relatedMatches	skos:relatedMatches
 /collections	skos:collections
-/id	@id
-/skosType	@type
-/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
-/altLabel	http://www.w3.org/2004/02/skos/core#altLabel
-/hiddenLabel	
-/notation	http://www.w3.org/2004/02/skos/core#notation
-/note	http://www.w3.org/2004/02/skos/core#note
-/changeNote	http://www.w3.org/2004/02/skos/core#changeNote
-/definition	http://www.w3.org/2004/02/skos/core#definition
-/editorialNote	http://www.w3.org/2004/02/skos/core#editorialNote
-/example	http://www.w3.org/2004/02/skos/core#example
-/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
-/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote

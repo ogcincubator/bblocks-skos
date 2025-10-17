@@ -70,6 +70,10 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "ConceptScheme": "skos:ConceptScheme",
+    "Concept": "skos:Concept",
+    "Collection": "skos:Collection",
+    "OrderedCollection": "skos:OrderedCollection",
     "id": "@id",
     "skosType": "@type",
     "prefLabel": {
@@ -112,17 +116,33 @@ Links to the schema:
       "@id": "skos:scopeNote",
       "@container": "@language"
     },
-    "ConceptScheme": "skos:ConceptScheme",
-    "Concept": "skos:Concept",
-    "Collection": "skos:Collection",
-    "OrderedCollection": "skos:OrderedCollection",
     "members": {
       "@context": {
         "topConceptOf": {
+          "@context": {
+            "concepts": {
+              "@reverse": "skos:inScheme",
+              "@type": "@id"
+            },
+            "topConcepts": {
+              "@id": "skos:hasTopConcept",
+              "@type": "@id"
+            }
+          },
           "@id": "skos:topConceptOf",
           "@type": "@id"
         },
         "inScheme": {
+          "@context": {
+            "concepts": {
+              "@reverse": "skos:inScheme",
+              "@type": "@id"
+            },
+            "topConcepts": {
+              "@id": "skos:hasTopConcept",
+              "@type": "@id"
+            }
+          },
           "@id": "skos:inScheme",
           "@type": "@id"
         },

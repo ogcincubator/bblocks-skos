@@ -7,6 +7,50 @@ A Concept Scheme as defined in SKOS
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### ConceptScheme
+#### json
+```json
+{
+  "id": "Cast",
+  "prefLabel": "Usual Suspects",
+  "concepts": [ {
+    "id": "frog1",
+    "prefLabel": "Kermit"
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld",
+  "id": "Cast",
+  "prefLabel": "Usual Suspects",
+  "concepts": [
+    {
+      "id": "frog1",
+      "prefLabel": "Kermit"
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<file:///github/workspace/frog1> skos:inScheme <file:///github/workspace/Cast> ;
+    skos:prefLabel "Kermit" .
+
+<file:///github/workspace/Cast> skos:prefLabel "Usual Suspects" .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -59,6 +103,52 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "ConceptScheme": "skos:ConceptScheme",
+    "Concept": "skos:Concept",
+    "Collection": "skos:Collection",
+    "OrderedCollection": "skos:OrderedCollection",
+    "id": "@id",
+    "skosType": "@type",
+    "prefLabel": {
+      "@id": "skos:prefLabel",
+      "@container": "@language"
+    },
+    "altLabel": {
+      "@id": "skos:altLabel",
+      "@container": "@language"
+    },
+    "notation": {
+      "@id": "skos:notation",
+      "@container": "@language"
+    },
+    "note": {
+      "@id": "skos:note",
+      "@container": "@language"
+    },
+    "changeNote": {
+      "@id": "skos:changeNote",
+      "@container": "@language"
+    },
+    "definition": {
+      "@id": "skos:definition",
+      "@container": "@language"
+    },
+    "editorialNote": {
+      "@id": "skos:editorialNote",
+      "@container": "@language"
+    },
+    "example": {
+      "@id": "skos:example",
+      "@container": "@language"
+    },
+    "historyNote": {
+      "@id": "skos:historyNote",
+      "@container": "@language"
+    },
+    "scopeNote": {
+      "@id": "skos:scopeNote",
+      "@container": "@language"
+    },
     "concepts": {
       "@context": {
         "topConceptOf": {
@@ -102,6 +192,12 @@ Links to the schema:
           "@type": "@id"
         },
         "collections": {
+          "@context": {
+            "members": {
+              "@id": "skos:members",
+              "@type": "@id"
+            }
+          },
           "@id": "skos:collections",
           "@type": "@id"
         }
@@ -152,6 +248,12 @@ Links to the schema:
           "@type": "@id"
         },
         "collections": {
+          "@context": {
+            "members": {
+              "@id": "skos:members",
+              "@type": "@id"
+            }
+          },
           "@id": "skos:collections",
           "@type": "@id"
         }
@@ -159,52 +261,6 @@ Links to the schema:
       "@id": "skos:hasTopConcept",
       "@type": "@id"
     },
-    "id": "@id",
-    "skosType": "@type",
-    "prefLabel": {
-      "@id": "skos:prefLabel",
-      "@container": "@language"
-    },
-    "altLabel": {
-      "@id": "skos:altLabel",
-      "@container": "@language"
-    },
-    "notation": {
-      "@id": "skos:notation",
-      "@container": "@language"
-    },
-    "note": {
-      "@id": "skos:note",
-      "@container": "@language"
-    },
-    "changeNote": {
-      "@id": "skos:changeNote",
-      "@container": "@language"
-    },
-    "definition": {
-      "@id": "skos:definition",
-      "@container": "@language"
-    },
-    "editorialNote": {
-      "@id": "skos:editorialNote",
-      "@container": "@language"
-    },
-    "example": {
-      "@id": "skos:example",
-      "@container": "@language"
-    },
-    "historyNote": {
-      "@id": "skos:historyNote",
-      "@container": "@language"
-    },
-    "scopeNote": {
-      "@id": "skos:scopeNote",
-      "@container": "@language"
-    },
-    "ConceptScheme": "skos:ConceptScheme",
-    "Concept": "skos:Concept",
-    "Collection": "skos:Collection",
-    "OrderedCollection": "skos:OrderedCollection",
     "memberList": {
       "@id": "skos:memberList",
       "@type": "@id",

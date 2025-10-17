@@ -1,5 +1,5 @@
-Validation report for ogc.skos.common - Common SKOS properties
-Generated 2025-10-17T10:13:23.282119+00:00
+Validation report for ogc.skos.concept - SKOS Concept
+Generated 2025-10-17T10:13:23.570004+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -12,12 +12,12 @@ Validation passed
 === End JSON Schema ===
 
 === SHACL ===
-Validation result for _sources/common/rules.shacl:
+Validation result for _sources/concept/rules.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for _sources/common/rules.shacl:
- - Shape :singlePrefLabel: _:N0b4fb66c0dd8464591e7b1eaefee2d57
+Focus nodes for _sources/concept/rules.shacl:
+ - Shape :relatedDisjointWithBroaderTransitive: *none*
 
 === End SHACL ===
 

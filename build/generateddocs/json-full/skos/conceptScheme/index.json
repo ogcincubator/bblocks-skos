@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc",
   "version": "0.1",
-  "dateOfLastChange": "2025-02-19",
+  "dateOfLastChange": "2025-10-17",
   "sources": [
     {
       "title": "SKOS Reference",
@@ -21,18 +21,18 @@
     "skos",
     "concept scheme"
   ],
-  "shaclRules": {
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
+  "shaclShapes": {
     "ogc.skos.concept": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
   "dependsOn": [
-    "ogc.skos.common",
     "ogc.skos.concept",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.skos.common"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld",
   "schema": {
@@ -44,6 +44,29 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/conceptScheme/",
   "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-skos/blob/master/build/tests/skos/conceptScheme/",
+  "examples": [
+    {
+      "title": "ConceptScheme",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n  \"id\": \"Cast\",\n  \"prefLabel\": \"Usual Suspects\",\n  \"concepts\": [ {\n    \"id\": \"frog1\",\n    \"prefLabel\": \"Kermit\"\n    }\n  ]\n}\n",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/conceptScheme/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld\",\n  \"id\": \"Cast\",\n  \"prefLabel\": \"Usual Suspects\",\n  \"concepts\": [\n    {\n      \"id\": \"frog1\",\n      \"prefLabel\": \"Kermit\"\n    }\n  ]\n}",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/conceptScheme/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n<file:///github/workspace/frog1> skos:inScheme <file:///github/workspace/Cast> ;\n    skos:prefLabel \"Kermit\" .\n\n<file:///github/workspace/Cast> skos:prefLabel \"Usual Suspects\" .\n\n",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/conceptScheme/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  conceptSchemeOrId:\n    oneOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    - $ref: '#'\n  conceptSchemeOrIdArray:\n    oneOf:\n    - $ref: '#/$defs/conceptSchemeOrId'\n    - type: array\n      items:\n        $ref: '#/$defs/conceptSchemeOrId'\ntype: object\nproperties:\n  id:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  concepts:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n    x-jsonld-reverse: skos:inScheme\n    x-jsonld-type: '@id'\n  topConcepts:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n    x-jsonld-id: skos:hasTopConcept\n    x-jsonld-type: '@id'\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml\noneOf:\n- not:\n    required:\n    - skosType\n- required:\n  - skosType\n  properties:\n    skosType:\n      const: ConceptScheme\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-skos",
   "gitPath": "_sources/conceptScheme"

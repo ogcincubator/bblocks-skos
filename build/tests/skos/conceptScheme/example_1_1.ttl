@@ -1,0 +1,7 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<file:///github/workspace/frog1> skos:inScheme <file:///github/workspace/Cast> ;
+    skos:prefLabel "Kermit" .
+
+<file:///github/workspace/Cast> skos:prefLabel "Usual Suspects" .
+

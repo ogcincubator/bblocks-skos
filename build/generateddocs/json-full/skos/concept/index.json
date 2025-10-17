@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc",
   "version": "0.1",
-  "dateOfLastChange": "2025-02-19",
+  "dateOfLastChange": "2025-10-17",
   "sources": [
     {
       "title": "SKOS Reference",
@@ -21,7 +21,7 @@
     "skos",
     "concept"
   ],
-  "shaclRules": {
+  "shaclShapes": {
     "ogc.skos.concept": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ],
@@ -30,9 +30,9 @@
     ]
   },
   "dependsOn": [
-    "ogc.skos.common",
-    "ogc.skos.conceptScheme",
     "ogc.skos.collection",
+    "ogc.skos.conceptScheme",
+    "ogc.skos.common",
     "ogc.ogc-utils.iri-or-curie"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld",
@@ -46,6 +46,28 @@
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-skos/blob/master/build/tests/skos/concept/",
+  "examples": [
+    {
+      "title": "Concept",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n   \"id\": \"frog1\",\n   \"prefLabel\": \"Kermit\",\n   \"broader\": \"stars\",\n   \"definition\": \"the green guy\"\n }\n",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/concept/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld\",\n  \"id\": \"frog1\",\n  \"prefLabel\": \"Kermit\",\n  \"broader\": \"stars\",\n  \"definition\": \"the green guy\"\n}",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/concept/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n<file:///github/workspace/frog1> skos:definition \"the green guy\" ;\n    skos:prefLabel \"Kermit\" .\n\n",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/concept/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  conceptOrId:\n    oneOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    - $ref: '#'\n  conceptOrIdArray:\n    oneOf:\n    - $ref: '#/$defs/conceptOrId'\n    - type: array\n      items:\n        $ref: '#/$defs/conceptOrId'\ntype: object\nproperties:\n  topConceptOf:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray\n    x-jsonld-id: skos:topConceptOf\n    x-jsonld-type: '@id'\n  inScheme:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray\n    x-jsonld-id: skos:inScheme\n    x-jsonld-type: '@id'\n  broaderConcepts:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:broaderConcepts\n    x-jsonld-type: '@id'\n  narrowerConcepts:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:narrowerConcepts\n    x-jsonld-type: '@id'\n  relatedConcepts:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:relatedConcepts\n    x-jsonld-type: '@id'\n  closeMatches:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:closeMatches\n    x-jsonld-type: '@id'\n  exactMatches:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:exactMatches\n    x-jsonld-type: '@id'\n  broadMatches:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:broadMatches\n    x-jsonld-type: '@id'\n  narrowMatches:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:narrowMatches\n    x-jsonld-type: '@id'\n  relatedMatches:\n    $ref: '#/$defs/conceptOrIdArray'\n    x-jsonld-id: skos:relatedMatches\n    x-jsonld-type: '@id'\n  collections:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml#/$defs/collectionOrIdArray\n    x-jsonld-id: skos:collections\n    x-jsonld-type: '@id'\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml\noneOf:\n- not:\n    required:\n    - skosType\n- required:\n  - skosType\n  properties:\n    skosType:\n      const: Concept\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-skos",
   "gitPath": "_sources/concept"

@@ -1,0 +1,7 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld",
+  "id": "frog1",
+  "prefLabel": "Kermit",
+  "broader": "stars",
+  "definition": "the green guy"
+}

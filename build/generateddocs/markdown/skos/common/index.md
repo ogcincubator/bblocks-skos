@@ -135,6 +135,7 @@ $defs:
   languageStringMultiple:
     oneOf:
     - $ref: '#/$defs/languageStringArrayObject'
+    - $ref: '#/$defs/languageStringSingle'
     - type: array
       items:
         type: string
@@ -228,6 +229,10 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "ConceptScheme": "skos:ConceptScheme",
+    "Concept": "skos:Concept",
+    "Collection": "skos:Collection",
+    "OrderedCollection": "skos:OrderedCollection",
     "id": "@id",
     "skosType": "@type",
     "prefLabel": {
@@ -270,10 +275,6 @@ Links to the schema:
       "@id": "skos:scopeNote",
       "@container": "@language"
     },
-    "ConceptScheme": "skos:ConceptScheme",
-    "Concept": "skos:Concept",
-    "Collection": "skos:Collection",
-    "OrderedCollection": "skos:OrderedCollection",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "@version": 1.1
   }
