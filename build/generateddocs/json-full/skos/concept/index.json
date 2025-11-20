@@ -30,9 +30,9 @@
     ]
   },
   "dependsOn": [
-    "ogc.skos.collection",
-    "ogc.skos.conceptScheme",
     "ogc.skos.common",
+    "ogc.skos.conceptScheme",
+    "ogc.skos.collection",
     "ogc.ogc-utils.iri-or-curie"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld",

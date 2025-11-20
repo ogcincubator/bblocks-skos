@@ -9,18 +9,18 @@
 
 <https://ogcincubator.github.io/bblocks-skos/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N6489e1883ebe478e97a0a2e36a20e813 ;
+    prov:wasAttributedTo _:N1502a50d320143f98c3c01baf0c7a430 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-10-17T10:13:23.671959"^^xsd:dateTime ;
-            prov:startedAtTime "2025-10-17T10:13:23.602959"^^xsd:dateTime ;
+            prov:endedAtTime "2025-11-20T10:30:48.348140"^^xsd:dateTime ;
+            prov:startedAtTime "2025-11-20T10:30:48.278314"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:87b7a2f0cc9d228972fe59abf9068287dad3635c" ;
+                    dct:hasVersion "git:cf792363246fd7daa5196a04045dd6d222209f82" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-skos/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:N6489e1883ebe478e97a0a2e36a20e813 ] .
+            prov:wasAssociatedWith _:N1502a50d320143f98c3c01baf0c7a430 ] .
 
 <https://ogcincubator.github.io/ogc.skos.sharedProfile> a skos:Concept,
         dcat:Dataset,
@@ -30,10 +30,10 @@
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/sharedProfile/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/sharedProfile/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.sharedProfile" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.sharedProfile" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/sharedProfile/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-17"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -53,10 +53,10 @@
     rdfs:label "SKOS Collection" ;
     dct:abstract "A Collection as defined in SKOS"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/collection/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/collection/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -111,12 +111,12 @@
     rdfs:label "Common SKOS properties" ;
     dct:abstract "A generic SKOS object that can have labels and notes"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/common/index.md" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/common/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.common" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/common/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.common" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-17"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -140,12 +140,12 @@
     rdfs:label "SKOS Concept" ;
     dct:abstract "A Concept as defined in SKOS"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/concept/index.json" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/concept/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.concept" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/concept/index.md" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/concept/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-17"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -185,9 +185,9 @@ such as the Web Ontology language (OWL).
 
 <https://www.w3.org/TR/skos-reference/> rdfs:label "SKOS Reference" .
 
-_:N6489e1883ebe478e97a0a2e36a20e813 a prov:Agent,
+_:N1502a50d320143f98c3c01baf0c7a430 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.4.6" ;
+    dct:hasVersion "0.5.1" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

@@ -19,9 +19,9 @@
     }
   ],
   "dependsOn": [
-    "ogc.skos.collection",
     "ogc.skos.concept",
-    "ogc.skos.conceptScheme"
+    "ogc.skos.conceptScheme",
+    "ogc.skos.collection"
   ],
   "tags": [
     "skos",

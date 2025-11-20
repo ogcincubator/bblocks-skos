@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.skos.conceptScheme - SKOS ConceptScheme",
   "bblockName": "SKOS ConceptScheme",
   "bblockId": "ogc.skos.conceptScheme",
-  "generated": "2025-10-17T10:13:23.396304+00:00",
+  "generated": "2025-11-20T10:30:48.103876+00:00",
   "result": true,
   "items": [
     {
@@ -78,6 +78,26 @@
               },
               "isError": false,
               "message": "Focus nodes for _sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": [
+                    "<file:///github/workspace/frog1>",
+                    "<file:///github/workspace/Cast>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: <file:///github/workspace/frog1>,<file:///github/workspace/Cast>\n"
             }
           ]
         }

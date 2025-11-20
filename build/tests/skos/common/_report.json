@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.skos.common - Common SKOS properties",
   "bblockName": "Common SKOS properties",
   "bblockId": "ogc.skos.common",
-  "generated": "2025-10-17T10:13:23.299777+00:00",
+  "generated": "2025-11-20T10:30:47.946964+00:00",
   "result": true,
   "items": [
     {
@@ -85,12 +85,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:Ndd547356e0994102876e528cc7cf1277"
+                    "_:Ndcf18098d6784bb9ae8811c0f910ef1d"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Ndd547356e0994102876e528cc7cf1277\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Ndcf18098d6784bb9ae8811c0f910ef1d\n"
             }
           ]
         }
@@ -176,12 +176,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N7b414d5c3021491bbae6b5a4dcfe8683"
+                    "_:N0d9ff7c37bfe4b9ea565c19876412e99"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N7b414d5c3021491bbae6b5a4dcfe8683\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N0d9ff7c37bfe4b9ea565c19876412e99\n"
             }
           ]
         }
@@ -254,12 +254,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:Nfc4e3e52f8d44e5e8928f6c397c45817"
+                    "_:N2b3a46734fff4a22ae48382e67c83e8c"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nfc4e3e52f8d44e5e8928f6c397c45817\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N2b3a46734fff4a22ae48382e67c83e8c\n"
             }
           ]
         }
@@ -334,12 +334,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N0b4fb66c0dd8464591e7b1eaefee2d57"
+                    "_:Ne484bc8341d54b26b1bc2a2570ecb2bb"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N0b4fb66c0dd8464591e7b1eaefee2d57\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Ne484bc8341d54b26b1bc2a2570ecb2bb\n"
             }
           ]
         }
@@ -414,12 +414,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N03fea32e954c4b92a42233d2c0a226b0"
+                    "_:Nc00ef0b33f4a4fefbede9c9ff0c05b74"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N03fea32e954c4b92a42233d2c0a226b0\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nc00ef0b33f4a4fefbede9c9ff0c05b74\n"
             }
           ]
         }
